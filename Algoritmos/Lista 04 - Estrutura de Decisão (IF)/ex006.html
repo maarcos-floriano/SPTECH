@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Propria</title>
+  </head>
+  <body>
+    Qual a renda Familiar: <input type="number" id="renda_familiar" />
+    <br />
+    Qual o valor da Prestacao: <input type="number" id="valor_prestacao" />
+    <br />
+    <button onclick="casaPropria()">Verificar Financiamento</button>
+    <div id="msg_padrao"></div>
+    <div id="msg_extra" style="color: red; font-weight: bold"></div>
+  </body>
+</html>
+<script>
+  function casaPropria() {
+    var prestacao = Number(
+      (valor_prestacao.value / renda_familiar.value) * 100
+    );
+
+    msg_padrao.innerHTML = `A prestação corresponde a ${prestacao}% da renda familiar`;
+    if (prestacao > 30) {
+      msg_extra.innerHTML = `Será necessário complementar a renda familiar`;
+    }
+  }
+</script>
