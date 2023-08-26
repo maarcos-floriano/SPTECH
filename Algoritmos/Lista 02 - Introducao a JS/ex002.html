@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas Corporais</title>
+</head>
+<body>
+    <h1>Esse site ira te ajudar com suas medidas</h1>
+    <h2>Insira suas medidas:</h2>
+    <div>
+        <p>Peso</p>
+        <input type="number" id="peso">
+    </div>
+    <div>
+        <p>Altura </p>
+        <input type="number" id="altura">
+    </div>
+    <br>
+    <Button onclick="exibir()">Fale Comigo!</Button>
+</body>
+</html>
+<script>
+    function exibir(){
+        alert(`Você pesa ${peso.value} e tem ${altura.value} de altura`)
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economias</title>
+</head>
+<body>
+    <h1>Fiquei sabendo que voce esta com o bilhete de estudante</h1>
+    <h2>Agora vamos descobrir quanto voce ira economizar por mes</h2>
+
+    <p>Primeiro preciso saber o valor original da passagem</p>
+    <input type="number" id="passagem">
+    <p>Agora, me dica quantas viagens voce fara por mes</p>
+    <input type="number" id="viagens">
+    <br>
+    <br>
+    <button onclick="economias()">Ver Economias</button>
+</body>
+</html>
+<script>
+    function economias() {
+        alert(`Primeiramente, voce gastaria R$${(passagem.value*viagens.value)}`)
+        alert(`Agora voce ira gastar ${(Number(passagem.value)/2)*(Number(viagens.value))}`)
+    }
+</script>

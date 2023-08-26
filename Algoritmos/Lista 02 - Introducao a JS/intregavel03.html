@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sptech</title>
+</head>
+
+<body>
+  <h1>Vamos te ajudar a saber sua media</h1>
+  <p>
+    Na SPTech o aluno tem 2 notas: A da <b>"avaliação continuada"</b> e a da
+    <b>"avaliação semestral"</b>. A média final é a soma simples entre 40% da
+    "continuada" e 60% da "semestral".
+  </p>
+  <h2>Agora preciso saber suas notas</h2>
+  
+  <p>Qual seu nome meu rei :</p>
+    <input type="text" id="nome" />
+  <p>Primeira nota, <b>continuada :</b></p>
+    <input type="number" id="continuada" />
+  <p>Segunda nota, <b>semestral :</b></p>
+    <input type="number" id="semestral" />
+
+  <br/>
+  <br/>
+
+  <button onclick="media()">Calculo da media</button>
+</body>
+
+</html>
+<script>
+  function media() {
+    alert(
+      `A média de ${nome.value} será de ${ Number(continuada.value) * (40 / 100) +
+      Number(semestral.value) * (60 / 100)
+      }`
+    );
+  }
+</script>

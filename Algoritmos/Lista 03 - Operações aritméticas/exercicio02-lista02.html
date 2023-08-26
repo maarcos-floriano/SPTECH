@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+</head>
+<style>
+    p{
+        margin-bottom: 0;
+    }
+</style>
+<body>
+    
+    <h1>ELEIÇÕES 2023</h1>
+    <p>Votos do Candidato A</p>
+        <input type="number" id="votosCandA">
+    <p>Votos do Candidato B</p>
+        <input type="number" id="votosCandB">
+    <p>Votos em Branco</p>
+        <input type="number" id="votosBrancos">
+    <p>Votos em Nulos</p>
+        <input type="number" id="votosNulo">
+    <br>
+    <br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+
+    <div id="exibirResposta"></div>
+
+</body>
+</html>
+<script>
+
+    function resultado() {
+
+        var candA = Number(votosCandA.value);
+        var candB = Number(votosCandB.value);
+        var vtsBrancos = Number(votosBrancos.value);
+        var vtsNulo = Number(votosNulo.value);
+
+        var totalVotos = Number(Number(votosCandA.value) + Number(votosCandB.value) + Number(votosBrancos.value) + Number(votosNulo.value));
+
+        exibirResposta.innerHTML = `
+
+        Total de votos: ${totalVotos} <br>
+        Candidato A: ${(candA/totalVotos)*100}% (${candA} votos) <br>
+        Candidato B: ${(candB/totalVotos)*100}% (${candB} votos) <br>
+        Invalidos: ${((Number(vtsBrancos+vtsNulo)/totalVotos)*100 )}% (${Number(vtsBrancos + vtsNulo)} votos)
+
+        
+        `
+    }
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+</head>
+<style>
+    p {
+        margin-bottom: 0;
+    }
+</style>
+
+<body>
+    <h1>Vou te ajudar a pedir a sua pizza</h1>
+    <p>Qual o sabor da Pizza:</p>
+    <input type="text" id="sabor">
+    <p>Qual o preço da Pizza:</p>
+    <input type="number" id="preco">
+    <p>Para quantos amigos vai ser:</p>
+    <input type="number" id="amigos">
+    <br>
+    <br>
+    <button onclick="pizzaria()">Ver valor por amigo</button>
+    <div id="jose"></div>
+</body>
+
+</html>
+<script>
+    function pizzaria() {
+        var total = Number(Number(preco.value) + Number((preco.value*0.10)))
+        jose.innerHTML = `
+
+        O valor todal sera de: R$${total} <br>
+        Para ser justo, vamos dividir igualmente o total entre os ${amigos.value} amigos <br>
+        O valor por amigo vai ser de: R$${total/Number(amigos.value)}
+        `
+    }
+</script>

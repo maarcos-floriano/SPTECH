@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial</title>
+</head>
+<body>
+    <p>Insira o time ao qual voce dorce:</p>
+    <input type="text" id="time">
+    <br>
+    <p>Informe quantos mundias ele tem:</p>
+    <input type="number" id="mundial">
+    <br>
+    <br>
+    <button id="amor" onclick="exibir()">Amo meu time</button>
+</body>
+</html>
+<script>
+    function exibir() {
+        alert(`
+        O time ${time.value} tem ${mundial.value} mundiais da FIFA
+        `)
+    }
+</script>
