@@ -22,6 +22,11 @@ d) Somente caso a quantidade for a partir de 500, exiba também a frase: "Cuid
 </html>
 <script>
     function refrigerante() {
-        
+        var latinhas_ano = Number(latinhas_dia.value * 365)
+
+        if (latinhas_ano >= 500) {
+            alert('Cuidado com a diabete')
+        }
+        alert(`Voce consome ${latinhas_ano} latinhas de refri por ano`)
     }
 </script>
