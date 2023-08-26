@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intregaveis</title>
+  </head>
+  <body>
+    Quantas latinhas de refri vc toma por dia: <br />
+    <input type="number" id="latinhas_dia" /> <br />
+    <button onclick="refrigerante()">Quantos Refris?</button>
+    <div id="ignorar"></div>
+
+    <br /><br />
+
+    Quanto KWh voce consome por mes: <br />
+    <input type="number" id="kwh_mes" /> <br />
+    <button onclick="calculo()">Calcular conta de luz</button>
+    <div id="conteudo"></div>
+
+    <br />
+    <br />
+
+    Qual a renda Familiar: <br />
+    <input type="number" id="renda_familiar" />
+    <br />
+    Qual o valor da Prestacao: <br />
+    <input type="number" id="valor_prestacao" /> <br />
+    <br />
+    <button onclick="casaPropria()">Verificar Financiamento</button>
+    <div id="msg_padrao"></div>
+    <div id="msg_extra" style="color: red; font-weight: bold"></div>
+  </body>
+</html>
+<script>
+  function refrigerante() {
+    var latinhas_ano = Number(latinhas_dia.value * 365);
+
+    if (latinhas_ano >= 500) {
+      alert("Cuidado com a diabete");
+    }
+    alert(`Voce consome ${latinhas_ano} latinhas de refri por ano`);
+  }
+  function calculo() {
+    var kwh = Number(kwh_mes.value);
+    var consumo = kwh * 0.85;
+    var desconto = consumo * 0.1;
+
+    if (consumo < 100) {
+      conteudo.innerHTML = `Voce gastou ${kwh} esse mes, vai pagar ${
+        consumo - desconto
+      }`;
+    }
+    if (consumo >= 100) {
+      conteudo.innerHTML = `Voce gastou ${kwh} esse mes, vai pagar ${consumo}`;
+    }
+  }
+  function casaPropria() {
+    var prestacao = Number(
+      (valor_prestacao.value / renda_familiar.value) * 100
+    );
+
+    msg_padrao.innerHTML = `A prestação corresponde a ${prestacao}% da renda familiar`;
+    if (prestacao <= 30) {
+      msg_extra.innerHTML = ``;
+    }
+    if (prestacao > 30) {
+      msg_extra.innerHTML = `Será necessário complementar a renda familiar`;
+    }
+  }
+</script>
