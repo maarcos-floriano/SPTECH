@@ -1,0 +1,26 @@
+.pai-a{
+    width: 500px; 
+    height: 500px; 
+    background-color: #ffbf47;
+}
+.filho-a{
+    background-color: #90ee90; 
+    width: 50%; 
+    height: 50%;
+}
+p{
+    color: white; 
+    background-color: red; 
+    font-size: 25px; 
+    font-family: monospace; 
+    font-weight: bold; 
+}
+.pai-b{width: 50%; 
+    height: 50vh; 
+    background-color: #add8e6;
+}
+.filho-b{
+    width: 75vw; 
+    height: 50%; 
+    background-color: #ff0000;
+}
