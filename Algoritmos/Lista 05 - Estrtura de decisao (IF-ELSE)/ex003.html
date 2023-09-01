@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    Quantos chocolates voce escolheu ?
+    <input id="ipt_chocolate" type="number">
+    <button onclick="doces()">Comprar</button>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function doces() {
+        var chocolate = Number(ipt_chocolate.value)
+        var valorChocolate = 3
+
+        if (chocolate < 12) {
+            mensagem.innerHTML = `o valor da sua compra foi de ${chocolate*valorChocolate}`
+        }else {
+         valorChocolate = 2.50
+         mensagem.innerHTML = `o valor da sua compra foi de ${chocolate*valorChocolate}`
+        }
+    }
+</script>
