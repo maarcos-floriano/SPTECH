@@ -6,13 +6,17 @@
     <title>Economias</title>
 </head>
 <body>
-    <div id="msg_padrao"></div>
-    <div id="msg_extra" style="color: red;"></div>
+    Qual sua meta de economias ?
+    <input id="meta_economias">
+    Quanto voce tem guardado ?
+    <input id="money_guardado">
+
+    <button onclick="cofre()">Analisar Economia</button>
 </body>
 </html>
 <script>
-    msg_extra.innerHTML = `
-    <b> Negrito </b>
-    <span style="color: red;"> Vermelho </span>
-    `
+    function cofre(){
+        var meta = Number(meta_economias.value)
+        var guardado = Number(money_guardado)
+    }
 </script>
