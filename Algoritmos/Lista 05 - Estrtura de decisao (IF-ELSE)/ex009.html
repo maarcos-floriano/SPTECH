@@ -7,16 +7,31 @@
 </head>
 <body>
     Qual sua meta de economias ?
-    <input id="meta_economias">
+    <input id="ipt_meta">
+    <br>
     Quanto voce tem guardado ?
-    <input id="money_guardado">
+    <input id="ipt_guardado">
 
     <button onclick="cofre()">Analisar Economia</button>
+
+    <br>
+
+    <div id="mensagem"></div>
 </body>
 </html>
 <script>
     function cofre(){
-        var meta = Number(meta_economias.value)
-        var guardado = Number(money_guardado)
+        var meta = Number(ipt_meta.value)
+        var guardado = Number(ipt_guardado.value)
+        
+         if (meta == guardado) {
+            mensagem.innerHTML = `Parabéns, meta alcançada!`
+        }
+        if (guardado > meta) {
+            mensagem.innerHTML = `Meta ultrapassada em ${guardado - meta}`
+        }
+        if (guardado < meta){
+            mensagem.innerHTML = ` Força! Ainda em busca da meta! Falta ${meta - guardado}`
+        }
     }
 </script>
