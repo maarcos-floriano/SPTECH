@@ -1,0 +1,16 @@
+Marcos-Store
+
+1) Informe quanto ele tem na conta 
+
+2) Informe quantos reais foi gasto na loja
+
+3) Qual a bandeira do cartão usado na compra
+
+4) Clique em ver extrato
+
+Dependendo da bandeira ele ganha uma porcentagem de cash Back na compra feita na loja 
+1 Mastercard 10% de cashback
+2 Visa 15% de cashback
+3 Platinum 20 % de cashback
+
+5) Após clicar no botão mostre quanto ele terá na conta ao final da compra
