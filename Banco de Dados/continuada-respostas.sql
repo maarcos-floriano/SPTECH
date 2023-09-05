@@ -65,3 +65,21 @@ INSERT INTO historico (nome, url, navegador) VALUES
 SELECT * FROM historico WHERE nome = '404 Not Found' AND navegador = 'Google Chrome';
 /*Ex013*/
 ALTER TABLE historico ADD COLUMN sistOp VARCHAR(30);
+
+/*Ex015*/
+SELECT * FROM historico WHERE url LIKE '%amazon%';
+
+/*Ex016*/
+SELECT * FROM historico WHERE nome LIKE 'M%';
+
+/*Ex017*/
+SELECT id FROM historico WHERE nome = 'Working...';
+UPDATE historico SET navegador = 'Google Chrome' WHERE id = 5;
+
+/*Ex018*/
+SELECT id FROM historico WHERE nome = 'Página Inicial - Microsoft Azure';
+UPDATE historico SET dataHora = 2023-02-31 08:00:00 WHERE id = 2;
+
+/*Ex015*/
+/*Ex015*/
+/*Ex015*/
