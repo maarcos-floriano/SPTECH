@@ -1,0 +1,38 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(112deg, #7E5DCA -0.61%, rgba(168, 66, 255, 0.00) 99.39%);
+}
+header{
+
+}
+.imagem{
+    width: 87px;
+    height: 85px;
+    border-radius: 50px;
+    border: 1px solid #000;
+}
+.centralizar-coluna{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.centralizar-linha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+}
+.botao-escuro{
+    display: flex;
+    width: 226px;
+    height: 50px;
+    justify-content: center;
+}
+.botao{
+    display: flex;
+    width: 226px;
+    height: 50px;
+    justify-content: center;
+}
