@@ -9,25 +9,26 @@
 </head>
 <body>
     <header class="centralizar-linha cabecalho">
-        <img src="./imagens/e-mail.png" class="imagem">
+        <img src="./imagens/Archery_Target_icon-icons.com_76249.png" class="imagem">
         <h1 class="text">Calculadora Financeira</h1>
-        <div class="alinhar-linha">
+        <div class="alinhar-linha login">
             <button class="botao__cor__perseguida">Login</button><button class="botao-cadastro">Cadastro</button>
         </div>
     </header>
-    <div class="centralizar-coluna">
-        <section class="tag centralizar-coluna">
+    <main class="centralizar-coluna">
+        <section class="tag centralizar-coluna" id="textCard">
             <div></div>
             <article class="centralizar-coluna">
                 <p class="text">Quatos ar-condicionados voce tem na sala ?</p>
-                <input type="number" class="ipt">
+                <input type="number" class="ipt" id="ipt_ar">
             </article>
             <article class="centralizar-coluna">
                 <p class="text">Quantos servidores voce tem na sala ?</p>
-                <input type="number" class="ipt">
+                <input type="number" class="ipt" id="ipt_server">
             </article>
-            <button class="botao">Calcular</button>
+            <button class="botao" onclick="calcular()">Calcular</button>
         </section>
-    </div>
+    </main>
 </body>
 </html>
+<script src="script.js"></script>

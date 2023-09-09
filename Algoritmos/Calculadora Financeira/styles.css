@@ -1,25 +1,32 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(112deg, #7E5DCA -0.61%, rgba(168, 66, 255, 0.00) 99.39%);
+    background: linear-gradient(112deg, #10193C -0.61%, rgba(167, 66, 255, 0.432) 99.39%);
 }
 .cabecalho{
     width: 100vw;
     height: 120px;
-    border: 1px solid black;
 }
 .text{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 20px;
     max-width: 88%;
-    margin-bottom: 5px;
+    color: white;
 }
 .imagem{
     width: 87px;
     height: 85px;
     border-radius: 50px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.438);
+}
+.login{
+    width: 87px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .centralizar-coluna{
     display: flex;
@@ -75,4 +82,11 @@ body{
 }
 .decoration:hover{
     color: #000;
+}
+.text-normal{
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: large;
+    color: white;
 }
