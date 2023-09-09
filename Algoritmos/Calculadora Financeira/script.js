@@ -1,6 +1,7 @@
 function calcular() {
 
     var servidores = Number(ipt_server.value);
+    var hacks = Number(servidores / 3)
     var arCondicionado = Number(ipt_ar.value);
     var consumoKWH = Number(arCondicionado * 576);
     var consumoReais = Number(consumoKWH) * 0.4;
@@ -10,10 +11,10 @@ function calcular() {
             Calculamos que o seu gasto mensal com os ar-condicionados é de em media R$ ${consumoReais} 
             <br>
             <br>
-            Pense que voce pode economizar isso se tiver um bom gerenciamento da circulação de ar do Data-Center
+            Considerando que voce possui ${servidores} servidores, isso bem organizado seria necessario ${hacks} hacks para gerenciar bem, e um ar-condicionado por hack
             <br>
             <br>
-            Para isso que nossa empresa lhe traz o melhor do mercado
+            A instalação do nosso projeto, é feita por hack, a cada um hack sera necessario um sensor o custo final seria de R$ ${hacks*1000}
         </div>
         <button class="botao" onclick="voltar()">Voltar</button>
 `;
