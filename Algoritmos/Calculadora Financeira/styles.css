@@ -1,7 +1,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(112deg, #10193C -0.61%, rgba(167, 66, 255, 0.432) 99.39%);
+    background: linear-gradient(112deg, #10193C -0.61%, #412583e0 99.39%);
 }
 .cabecalho{
     width: 100vw;
@@ -89,4 +89,5 @@ body{
     font-weight: 700;
     font-size: large;
     color: white;
+    text-align: center;
 }

@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Financeira</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="centralizar-linha cabecalho">
-        <img src="./imagens/Archery_Target_icon-icons.com_76249.png" class="imagem">
-        <h1 class="text">Calculadora Financeira</h1>
-        <div class="alinhar-linha login">
-            <button class="botao__cor__perseguida">Login</button><button class="botao-cadastro">Cadastro</button>
-        </div>
+      <img
+        src="./imagens/Archery_Target_icon-icons.com_76249.png"
+        class="imagem"
+      />
+      <h1 class="text">Calculadora Financeira</h1>
+      <div class="alinhar-linha login">
+        <button class="botao__cor__perseguida">Login</button
+        ><button class="botao-cadastro">Cadastro</button>
+      </div>
     </header>
     <main class="centralizar-coluna">
-        <section class="tag centralizar-coluna" id="textCard">
-            <div></div>
-            <article class="centralizar-coluna">
-                <p class="text">Quatos ar-condicionados voce tem na sala ?</p>
-                <input type="number" class="ipt" id="ipt_ar">
-            </article>
-            <article class="centralizar-coluna">
-                <p class="text">Quantos servidores voce tem na sala ?</p>
-                <input type="number" class="ipt" id="ipt_server">
-            </article>
-            <button class="botao" onclick="calcular()">Calcular</button>
-        </section>
+      <section class="tag centralizar-coluna" id="textCard">
+        <div class="text-normal">Simulação</div>
+        <article class="centralizar-coluna">
+          <p class="text">Quatos ar-condicionados voce tem na sala ?</p>
+          <input type="number" class="ipt" id="ipt_ar"/>
+        </article>
+        <article class="centralizar-coluna">
+          <p class="text">Quantos servidores voce tem na sala ?</p>
+          <input type="number" class="ipt" id="ipt_server" />
+        </article>
+        <button class="botao" onclick="calcular()">Calcular</button>
+      </section>
     </main>
-</body>
+  </body>
 </html>
 <script src="script.js"></script>
