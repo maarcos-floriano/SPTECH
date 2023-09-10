@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Share+Tech+Mono&display=swap');
+
+body{
+    background-color: #010012;
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 80px; 
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+a:hover{
+    text-shadow: 0px 1px 30px #FFF;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+}
+.card{
+    width: 300px;
+    height: 500px;
+    background-color: #010028;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.titulo{
+    color: #FFF;
+    text-align: center;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.paragrafo{
+    height: 96px;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 232px;
+}
