@@ -14,7 +14,7 @@ function calcular() {
             Considerando que voce possui ${servidores} servidores, isso bem organizado seria necessario ${hacks} hacks para gerenciar bem, e um ar-condicionado por hack
             <br>
             <br>
-            A instalação do nosso projeto, é feita por hack, a cada um hack sera necessario um sensor o custo final seria de R$ ${hacks*1000}
+            A instalação do nosso projeto, é feita por hack, a cada um hack sera necessario um sensor, o custo final seria de R$ ${hacks*1000}
         </div>
         <button class="botao" onclick="voltar()">Voltar</button>
 `;
