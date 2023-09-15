@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    Insira sua altura <input type="number" id="ipt_altura">
+    <button onclick="analisar()">Analisar Estatura</button>
+    <!-- a) Solicite sua altura 
+
+b) Ao clicar em "Analisar Estatura", deve aparecer abaixo uma dessas frases: 
+
+   "Você pode ser piloto de corrida" (altura até 1.65) 
+
+   "Você pode ser jogador de futebol" (altura +1.65 até 1.80) 
+
+   "Você pode ser jogador de vôlei ou basquete" (altura + 1.80)  -->
+</body>
+</html>
+<script>
+    function analisar(){
+        var altura = Number(ipt_altura.value);
+
+        if (altura < 1.65) alert('Voce pode ser piloto de corrida');
+            else if (altura < 1.80) alert('Voce pode ser jogador de futebol');
+                else alert('voce pode ser jogador de volei ou basquete');
+    }
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        .back-black{
+            background-color: black;
+        }
+        .back-white{
+            background-color: white;
+        }
+        .back-green{
+            background-color: green;
+        }
+        .text-red{
+            color: red;
+        }
+        .text-white{
+            color: white;
+        }
+        .text-black{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    Para qual time voce torce <input type="text" id="ipt_time">
+    <button onclick="analisar()">Fale sobre esse time</button>
+    <div id="msg_corinthians" class="back-black text-white"></div>
+    <div id="msg_palmeiras" class="back-green text-white"></div>
+    <div id="msg_santos" class="back-white text-black"></div>
+    <div id="msg_saoPaulo" class="back-black text-red"></div>
+    <!-- a) Pergunte qual é o time grande de São Paulo que o usuário torce. 
+    b) Ao clicar em "Fale sobre esse time", exiba abaixo: 
+   "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians 
+
+   "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras 
+
+   "Agora quem dá a bola é o Santos" com fundo branco e letra preta, se for Santos 
+
+   "Salve o Tricolor paulista" com fundo preto e letra vermelha, se for São Paulo  -->
+</body>
+</html>
+<script>
+    function analisar() {
+        var time = ipt_time.value
+
+        if (time == "corinthians") msg_corinthians.innerHTML = `Salve o Corinthians`;
+            else if (time == "palmeiras") msg_palmeiras.innerHTML = `Salve o alviverde imponente`;
+                else if (time == "santos") msg_santos.innerHTML = `Agora quem dá a bola é o Santos`;
+                    else msg_saoPaulo.innerHTML = `Salve o Tricolor paulista`;
+    }
+</script>
