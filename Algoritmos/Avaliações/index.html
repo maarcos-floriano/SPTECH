@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Despezas</title>
+    <script
+      type="text/javascript"
+      src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ZkjfEtH5NQDPL9AkyzuCsNpUFAY8EeQWINhjpGBRkbTpqPIJwvc3OdXw-R0u-x9E6Xj5B-RGSbynAQshJIgRMwoe-xcU0C0xzJH2R6UORkGwhajORAt_5zy4x588bk3LSrcgSj3a9L5oTz-FRDbwnvTkuf-QZHcUB1W8brmqePc50VJkMt_hP6Gn5TXhPspE"
+      charset="UTF-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tb29kbGUuc3B0ZWNoLnNjaG9vbC9wbHVnaW5maWxlLnBocC8zMzI3NC9xdWVzdGlvbi9yZXNwb25zZV9hdHRhY2htZW50cy8xMDAwNzgvMS8yNzgwODE0L2luZGV4Lmh0bWw_Zm9yY2Vkb3dubG9hZD0x"
+    />
+  </head>
+
+  <body>
+    Quantidade de energia consumida no mes em KWH (Apenas numeros)
+    <input type="number" id="ipt_kwh" /> <br />
+
+    Qual bandeira tarifaria da energia ( 1 para Vermelha, 2 para amarela ou 3
+    para verde) <input type="number" id="ipt_bandeira" /> <br />
+
+    Volume de agua consumida (Em numeros) <input type="number" id="ipt_agua" />
+    <br />
+
+    Quantidade de vazamentos de água na casa (apenas números)
+    <input type="number" id="ipt_vazamento" /> <br />
+
+    Volume de gas consumido em litros (apenas numeros)
+    <input type="number" id="ipt_gas" /> <br />
+
+    Valor base do plano de internet (Apenas numeros)
+    <input type="number" id="ipt_internet" /> <br />
+
+    Existe alguma linha telefonica vinculada a internet (sim ou nao)
+    <input type="text" id="ipt_telefonica" /> <br />
+
+    <button onclick="despezas()">Calcular despesas fixas</button>
+
+    <div id="extrato"></div>
+  </body>
+</html>
+
+<script>
+  function despezas() {
+    var kwh = Number(ipt_kwh.value);
+    var consumoKwh = 0;
+    var bandeira = ipt_bandeira.value;
+
+    var agua = Number(ipt_agua.value);
+    var consumoAgua = agua * 3.5;
+    var vazamento = Number(ipt_vazamento.value);
+    var desperdicio = 10;
+
+    var gas = Number(ipt_gas.value);
+
+    var consumoGas = gas * 2.5;
+
+    var internet = Number(ipt_internet.value);
+    var consumoInternet = internet;
+
+    var telefonica = ipt_telefonica.value;
+
+    if (bandeira == 3) {
+      consumoKwh = kwh * 0.75;
+    }
+    if (bandeira == 2) {
+      consumoKwh = kwh * 0.9;
+    }
+    if (bandeira == 1) {
+      consumoKwh = kwh * 1.0;
+    }
+    if (kwh <= 50) {
+      consumoKwh - consumoKwh * 0.1;
+    }
+
+    if (vazamento > 0) {
+      consumoAgua += desperdicio * vazamento;
+    }
+
+    if (telefonica == "sim") {
+      consumoInternet += consumoInternet * (25 / 100);
+    }
+
+    extrato.innerHTML = `
+        Com o consumo de ${kwh} kWh na bandeira ${bandeira}, a conta de energia totaliza R$ ${consumoKwh}.
+
+    Com o consumo de ${agua} litros de água contendo ${vazamento} vazamentos e a taxa de saneamento, a conta de água totaliza R$ ${consumoAgua}.
+
+    Com o consumo de ${gas} metros cúbicos de gás, a conta de gás totaliza R$ ${consumoGas}.
+
+    Com um valor base de R$ ${internet} no plano de internet , a conta de internet/telefone totaliza R$ ${consumoInternet}.
+
+    Gasto total de despesas mensal: R$ ${Number(
+      consumoAgua + consumoGas + consumoInternet + consumoKwh
+    )}.`;
+  }
+</script>
