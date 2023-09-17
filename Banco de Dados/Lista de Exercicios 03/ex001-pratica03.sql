@@ -43,9 +43,16 @@ UPDATE `sprint2`.`Atleta` SET `fkPais` = '3' WHERE (`idAtleta` = '3');
 UPDATE `sprint2`.`Atleta` SET `fkPais` = '3' WHERE (`idAtleta` = '4');
 UPDATE `sprint2`.`Atleta` SET `fkPais` = '2' WHERE (`idAtleta` = '5');
 
-select 
-Pais.nome as NomePais, 
-Atleta.nome as NomeAtleta
-	from Atleta 
+select  Pais.nome as NomePais, Atleta.nome as NomeAtleta from Atleta 
+    JOIN Pais
+		ON fkPais = idPais;
+        
+        
+select  Pais.nome as NomePais, Atleta.nome as NomeAtleta from Atleta 
+    JOIN Pais
+		ON fkPais = idPais
+			where Pais.capital = 'Brasilia';
+
+select * from Atleta 
     JOIN Pais
 		ON fkPais = idPais;
