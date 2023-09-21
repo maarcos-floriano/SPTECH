@@ -69,14 +69,14 @@
 
         <h3>converter para:</h3>
 
-        <input onclick="aparecer_octal()" type="checkbox"><b>Octal</b>
+        <input onclick="aparecer_octal()" type="checkbox" id="ipt_octal"><b>Octal</b>
         <div class="octal" id="demo2"></div><br>
 
         <input onclick="aparecer_hexa()" type="checkbox" id="ipt_hexa"><b>Hexadecimal</b>
         <div class="hexa" id="demo3"></div><br>
         
 
-        <input onclick="aparecer_bin()" type="checkbox"><b>Binário</b>
+        <input onclick="aparecer_bin()" type="checkbox" id="ipt_binario"><b>Binário</b>
         <div class="binario" id="demo4"></div><br>
 
         <button onclick="converter()">Converter</button>
@@ -109,7 +109,7 @@
     }
 
     function aparecer_bin() {
-        demo4.style.display = 'block'
+       if(ipt_binario.checked==true) demo4.style.display = 'block';
     }
 
     function aparecer_hexa() {
@@ -122,7 +122,7 @@
     }
 
     function aparecer_octal() {
-        demo2.style.display = 'block'
+        if (ipt_octal.checked==true) demo2.style.display = 'block';
     }
     document.bgColor = "#00ffff";
 </script>
