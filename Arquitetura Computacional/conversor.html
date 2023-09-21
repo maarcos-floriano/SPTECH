@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        body {
+            background-color: rgba(0, 0, 0, 0.774);
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        .octal {
+            display: none;
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 5px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            border: 1px solid #ffffffad;
+            max-width: max-content;
+            max-height: max-content;
+        }
+
+        .hexa {
+            display: none;
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 5px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            border: 1px solid #ffffffad;
+            max-width: max-content;
+            max-height: max-content;
+        }
+
+        .binario {
+            display: none;
+            background-color: #000000;
+            border-radius: 5px;
+            padding: 5px;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            border: 1px solid #ffffffad;
+            max-width: max-content;
+            max-height: max-content;
+        }
+
+        main {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Conversor</h1>
+
+        <h3>Decimal</h3>
+        <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+
+        <h3>converter para:</h3>
+
+        <input onclick="aparecer_octal()" type="checkbox" id="ipt_octal"><b>Octal</b>
+        <div class="octal" id="demo2"></div><br>
+
+        <input onclick="aparecer_hexa()" type="checkbox" id="ipt_hexa"><b>Hexadecimal</b>
+        <div class="hexa" id="demo3"></div><br>
+        
+
+        <input onclick="aparecer_bin()" type="checkbox" id="ipt_binario"><b>Binário</b>
+        <div class="binario" id="demo4"></div><br>
+
+        <button onclick="converter()">Converter</button>
+    </main>
+</body>
+
+</html>
+<script>
+    function converter() {
+
+        var decimal = Number(demo1.value);
+
+        let octal = decimal.toString(8);
+
+        let hexadecimal = decimal.toString(16);
+
+        let binaria = decimal.toString(2);
+
+        console.log(decimal);
+        console.log(octal);
+        console.log(hexadecimal);
+        console.log(binaria);
+
+        document.getElementById("demo1").innerHTML = ` ${decimal}`;
+        document.getElementById("demo2").innerHTML = ` ${octal}`;
+        document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
+        document.getElementById("demo4").innerHTML = ` ${binaria}`;
+
+
+    }
+
+    function aparecer_bin() {
+       if(ipt_binario.checked==true) demo4.style.display = 'block';
+    }
+
+    function aparecer_hexa() {
+        if (ipt_hexa.checked==true) {
+            demo3.style.display = 'block'
+        }else{
+            demo3.style.display = 'none'
+        }
+
+    }
+
+    function aparecer_octal() {
+        if (ipt_octal.checked==true) demo2.style.display = 'block';
+    }
+    document.bgColor = "#00ffff";
+</script>
