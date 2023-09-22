@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 8</title>
+  </head>
+  <body>
+    Quantos pães Franceses voce come por dia ?
+    <input type="number" id="ipt_pao"/>
+
+    Quantos pacotes de bolacha vc consume por dia ?
+    <input type="number" id="ipt_bolacha"/>
+
+    Quantos copos de achocolatado voce toma por dia ?
+    <input type="number" id="ipt_nescau"/>
+
+    <button onclick="calcular()">Verificar Calorias</button>
+
+   <!-- e) Após fazer o cálculo, exiba uma dessas frases, abaixo do botão: 
+
+   "Parabéns, vai ficar em forma !", caso as calorias sejam menores do que 200. 
+
+   "Cuidado, vai ficar menos saudável !" caso as calorias sejam entre 200 e 400. 
+
+   "Alerta crítico de saúde !!!", caso as calorias sejam mais de 400.  -->
+  </body>
+</html>
+<script>
+    function calcular() {
+        var pao = Number(ipt_pao.value)
+        var bolacha = Number(ipt_bolacha.value)
+        var nescau = Number(ipt_nescau.value)
+
+        var caloriaPao = pao*50
+        var caloriaBolacha = bolacha*80
+        var caloriaNescau = nescau*70
+
+
+    }
+</script>
