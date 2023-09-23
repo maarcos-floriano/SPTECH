@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 8</title>
+  </head>
+  <body>
+    Insira o nome da empresa: <input type="text" id="ipt_nomeEmpresa"><br>
+    Qual o valor da bolsa fornecido pela empresa: <input type="number" id="ipt_valorBolsa"><br>
+    Qual o valor do VR da empresa: <input type="number" id="ipt_valorVale"><br>
+    Informe o tempo de descolamento da empresa ate a SPTECH: <input type="number" id="ipt_tempoDeslocamento">
+    <br>
+    <button onclick="safra()">É preferida?</button>
+    <br>
+    <div id="msg"></div>
+  </body>
+</html>
+<script>
+    function safra(){
+        var nomeEmpresa = ipt_nomeEmpresa.value;
+        var valorBolsa = Number(ipt_valorBolsa.value)
+        var valorVR = Number (ipt_valorVale.value);
+        var tempodeslcamento = Number(ipt_tempoDeslocamento.value);
+        var empresas = ["safra", "c6", "itau"];
+
+        if (valorBolsa>=1800 || valorVR>=20 || tempodeslcamento<=30 /*|| empresas.includes(nomeEmpresa)==true*/) msg.innerHTML = `A empresa ${nomeEmpresa} é uma de suas preferências`;
+            else msg.innerHTML = `A empresa ${nomeEmpresa} está fora da sua lista`;
+    }
+</script>
