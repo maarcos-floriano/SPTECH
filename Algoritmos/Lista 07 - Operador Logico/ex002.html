@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exexrcicio 02</title>
+</head>
+<body>
+    Qual a sua renda? <input type="number" id="ipt_renda">
+    Qual o total da renda familiar? <input type="number" id="ipt_rendaFamiliar">
+    <br>
+    <button onclick="analisar()">Verificar Ajuda</button>
+    <!-- a) Solicite renda do usuário 
+
+    b) Solicite a renda total familiar do usuário 
+
+    c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens 
+
+       "Você terá direito!", caso a renda do usuário for até 1050 e a renda familiar for até 2100. 
+       "Você NÃO terá direito", caso contrário  -->
+</body>
+</html>
+<script>
+    function analisar(){
+        var renda = Number(ipt_renda.value);
+        var rendaFamiliar = Number(ipt_rendaFamiliar.value);
+
+        if (renda < 1050 && rendaFamiliar < 2100) alert("Voce NÂO tera direito");
+            else alert("Voce NÂO tera direito");
+    }
+</script>

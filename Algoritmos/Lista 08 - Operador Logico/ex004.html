@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    Qual o metodo de pagamento? <input type="text" id="ipt_metodoPagento">
+    <button onclick="analisar()">Analisar Compra</button>]
+    <div id="msg"></div>
+<!-- a) Pergunte o modo de pagamento dentre as seguintes opções: 
+
+    Dinheiro 
+    débito 
+    crédito 
+    Boleto 
+
+b) Ao clicar num botão "Analisar compra", exiba uma dessa mensagens: 
+
+   "Você terá que pagar a vista", somente se o pagamento for dinheiro ou débito 
+   "Pagamento poderá ser parcelado", se o pagamento for crédito ou boleto  -->
+</body>
+</html>
+<script>
+    function analisar(){
+        var metodoPagento=ipt_metodoPagento.value;
+
+        if (metodoPagento=="dinheiro"||metodoPagento=="debito") {
+            msg.innerHTML = `Você terá que pagar a vista`;
+        }else msg.innerHTML = `Pagamento poderá ser parcelado`;
+    }
+</script>

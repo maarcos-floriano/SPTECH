@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="`t;else alert(``)"Nao vai comer ta}{>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+    Qual fruta chegou na mesa? <input type="text" id="ipt_fruta">
+    <button onclick="verificarFruta()">Vai comer ?</button>
+</body>
+</html>
+<script>
+    function verificarFruta(){
+        var fruta=ipt_fruta.value;
+
+        if(fruta=="abacaxi"||fruta=="uva") alert(`Sim vai comer ${fruta}`);
+            else alert(`Nao vai comer ${fruta}`);
+    }
+</script>
