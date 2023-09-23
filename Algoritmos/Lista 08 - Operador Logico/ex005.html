@@ -8,6 +8,9 @@
   <body>
     Qual a temperatura atual? <input type="number" id="ipt_tempAtual" />
     <button onclick="previsao()">Analisar Clima</button>
+    <br>
+    <br>
+    Lembrando que em caso de temperatura confortavel nada acontece (olhe o console na duvida)
     <!-- 
 a) Pergunte a temperatura atual 
 
@@ -28,6 +31,6 @@ c) Lembrando que, em caso de temperatura confortável, simplesmente nada acontec
         alert("Alerta de desconforto")
         if (tempAtual<21) alert("As pessoas vao ter hiportemia!");
             else alert("As pessoas vao dereter!");
-    }
+    }else console.log('nada acontece, mas a temperatura esta boa');
   }
 </script>
