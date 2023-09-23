@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 9</title>
+  </head>
+  <body>
+    <h2>Preciso saber o intervalo da altura desejada</h2>
+    Altura Inicial: <input type="number" id="ipt_alturaInicial" /><br /><br />
+    Altura Final: <input type="number" id="ipt_alturaFinal" /><br /><br />
+    <h2>Agora me passe os dados do piloto</h2>
+    Nome Piloto:<input type="text" id="ipt_nomePiloto" /><br /><br />
+    Altura Piloto:<input type="number" id="ipt_alturaPiloto" /><br /><br />
+
+    <button onclick="calcular()">Verificar</button> <br /><br />
+    <div id="msg"></div>
+    <!-- a) Pergunte o intervalo da altura desejada para os próximos pilotos (altura inicial e altura final de seleção) A altura inicial tem que ser maior que 1 e a altura final tem que ser maior que a altura inicial, caso contrário emitir mensagem de alerta E NÃO SEGUIR EM FRENTE. 
+
+    b) Pergunte o nome e a altura do candidato a piloto. 
+
+    c) Emitir uma das duas mensagens abaixo sem apagar as mensagens anteriores: 
+
+    1) “O candidato XXXXX com altura de 9,99 participará do processo de seleção de piloto”, caso a altura do candidato esteja no intervalo informado. 
+
+    2) “Infelizmente o candidato XXXXX com altura de 9,99 não atende os requisitos”, caso a altura do candidato NÃO esteja no intervalo informado.  -->
+  </body>
+</html>
+<script>
+  function calcular() {
+    //        var alturaInicial = document.getElementById("alturaInicial").value;
+    //        var alturaFinal = document.getElementById("alturaFinal").value;
+    var alturaInicial = Number(ipt_alturaInicial.value);
+    var alturaFinal = Number(ipt_alturaFinal.value);
+
+    var nomePiloto = ipt_nomePiloto.value;
+    var alturaPiloto = ipt_alturaPiloto.value;
+
+    if (alturaInicial > 1 && alturaFinal > alturaInicial) {
+      if (alturaPiloto >= alturaInicial && alturaPiloto <= alturaFinal) {
+        msg.innerHTML = `O candidato ${nomePiloto} com altura de ${alturaPiloto} participará do processo de seleção de piloto`;
+      } else
+        msg.innerHTML = `Infelizmente o candidato ${nomePiloto} com altura de ${alturaPiloto} não atende os requisitos`;
+    } else alert("Dados em nexo, tente novamente");
+  }
+</script>
