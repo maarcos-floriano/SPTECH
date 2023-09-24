@@ -26,21 +26,5 @@
     2) “Infelizmente o candidato XXXXX com altura de 9,99 não atende os requisitos”, caso a altura do candidato NÃO esteja no intervalo informado.  -->
   </body>
 </html>
-<script>
-  function calcular() {
-    //        var alturaInicial = document.getElementById("alturaInicial").value;
-    //        var alturaFinal = document.getElementById("alturaFinal").value;
-    var alturaInicial = Number(ipt_alturaInicial.value);
-    var alturaFinal = Number(ipt_alturaFinal.value);
-
-    var nomePiloto = ipt_nomePiloto.value;
-    var alturaPiloto = ipt_alturaPiloto.value;
-
-    if (alturaInicial > 1 && alturaFinal > alturaInicial) {
-      if (alturaPiloto >= alturaInicial && alturaPiloto <= alturaFinal) {
-        msg.innerHTML = `O candidato ${nomePiloto} com altura de ${alturaPiloto} participará do processo de seleção de piloto`;
-      } else
-        msg.innerHTML = `Infelizmente o candidato ${nomePiloto} com altura de ${alturaPiloto} não atende os requisitos`;
-    } else alert("Dados em nexo, tente novamente");
-  }
+<script src="ex009.js">
 </script>
