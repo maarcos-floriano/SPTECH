@@ -1,0 +1,26 @@
+{
+"workbench.colorTheme": "Dracula",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#1f1b2c",
+        "activityBar.foreground": "#dadada",
+        "activityBar.inactiveForeground": "#3b344f",
+        "sideBar.background": "#13121b",
+        "sideBar.foreground": "#dadada",
+        "editor.background": "#13121b",
+        "terminal.background": "#191622",
+        "terminal.SectionHeader.bakground": "#191622",
+        "titleBar.activeBackground": "#191622",
+        "dropdown.background": "#191622",
+        "dropdown.listBackground": "#191622",
+        "dropdown.border": "#191622",
+        "dropdown.foreground": "#dadada",
+        "titleBar.activeForeground": "#dadada",
+        "input.background": "#191622",
+        "panel.background": "#191622",
+        "panel.border": "#b470a0",
+        "panelTitle.activeBorder": "#b470a0",
+        "panelTitle.inactiveForeground": "#7c7785",
+        "editor.lineHighlightBorder": "#191622",
+        "editor.selectionBackground": "#393744"
+    }
+}
