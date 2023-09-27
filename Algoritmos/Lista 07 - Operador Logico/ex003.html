@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 3</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        button{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: white;
+            background-color: black;
+        }
+        .container-pai{
+            background-color: orange;
+            width: 250px;
+            height: 250px;
+            /* Aqui centraliza */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-filho{
+            width: 20px;
+            height: 20px;
+            background-color: aliceblue;
+            border: 1px solid black;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     Qual a nota do aluno? <input type="number" id="ipt_nota">
     <br>
     <button onclick="analisar()">Avaliar Aluno</button>
+
+    <div class="container-pai">
+        <div class="container-filho">1</div>
+        <div class="container-filho">2</div>
+        <div class="container-filho">3</div>
+    </div>
     <!-- a) Pergunte uma nota de um aluno 
 
     b) Ao clicar em "Avaliar aluno"... 
@@ -19,5 +57,4 @@
 </body>
 </html>
 <script src="ex003.js">
-
 </script>
