@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img id="img_seta" src="./seta.png" alt="seta" style="margin-left: 0px;">
+    </div>
+    <button onclick="moverDireita()">Direita</button>
+    <button onclick="moverEsquerda()">Esquerda</button>
+</body>
+</html>
+<script>
+    margemEsquerda=0;
+    function moverDireita(){
+        margemEsquerda += 10;
+        img_seta.style.marginLeft = margemEsquerda+'px';
+    }
+    function moverEsquerda(){
+        margemEsquerda -= 10;
+        img_seta.style.marginLeft = margemEsquerda+'px';
+    }
+</script>

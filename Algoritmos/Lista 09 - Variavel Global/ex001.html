@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="msg">
+        <img id="img" src="./google imagens.png" alt="google" style="width: 30px;">
+    </div>
+    <button onclick="aumentarImg()">Aumentar Imagem</button>
+    <button onclick="diminuirImg()">Diminuir Imagem</button>
+</body>
+</html>
+<script>
+    largura=30;
+
+    function aumentarImg(){
+        largura += 10;
+        // msg.innerHTML = `<img src="./google imagens.png" alt="google" width="${largura}px">`;
+        img.style.width = largura+'px';
+    }
+    function diminuirImg(){
+        largura -= 10;
+        // msg.innerHTML = `<img src="./google imagens.png" alt="google" width="${largura}px">`;
+        img.style.width = largura+'px';
+
+    }
+</script>
