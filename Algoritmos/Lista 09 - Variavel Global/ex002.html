@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o seu salario: <input type="number" id="ipt_salario"> <button onclick="confirmarSalario()">Confirmar Salario</button>
+    <br>
+    <br>
+    <div id="msg_grana">Grana Atual: R$ <span id="msg_salario">0</span></div>
+    <br><br>
+    <button onclick="pagarCem()">Pagar conta de 100,00</button>
+    <button onclick="pagarQuinhentos()">Pagar conta de 500,00</button>
+    <button onclick="ganharLoteria()">Ganhar 2000,00 na loteria</button>
+</body>
+</html>
+<script>
+    salario=0;
+
+    function confirmarSalario(){
+        msg_salario.innerHTML = Number(ipt_salario.value)
+    }
+    function pagarCem(){
+        salario = Number(msg_salario.innerHTML)
+        salario -= 100;
+        msg_salario.innerHTML = salario
+    }
+    function pagarQuinhentos(){
+        salario = Number(msg_salario.innerHTML)
+        salario -= 500;
+        msg_salario.innerHTML = salario
+    }
+    function ganharLoteria(){
+        salario = Number(msg_salario.innerHTML)
+        salario += 2000;
+        msg_salario.innerHTML = salario
+    }
+</script>
