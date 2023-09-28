@@ -22,7 +22,7 @@ create table Disciplina (
     idDisc int primary key auto_increment,
     nomeDisc varchar(45),
     fkProfessor int,
-    constraint fkProf foreign key(fkProfessor) references Professor(idProfessor)
+    constraint fkProf foreign key(fkProfessor) references Professores(idProfessor)
 );
 
 insert into Disciplina(nomeDisc, fkProfessor) values
@@ -33,3 +33,12 @@ insert into Disciplina(nomeDisc, fkProfessor) values
     ('Socio', 5),
     ('PI', 6);
 
+SELECT professores.*, disciplina.* from disciplina join professores on fkProfessor=idDisc;
+
+SELECT professores.nome, disciplina.nomeDisc from professores join disciplina on `fkProfessor`= `idDisc`;
+
+SELECT professores.*, disciplina.* from disciplina join professores on fkProfessor=idDisc WHERE professores.sobrenome = 'Santos';
+
+SELECT professores.espec1, disciplina.nomeDisc from professores
+join disciplina on `fkProfessor`= `idDisc` 
+WHERE professores.nome='Joao' ORDER BY espec1 asc;
