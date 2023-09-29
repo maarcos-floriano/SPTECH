@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <style>
+        .text-blue{
+            color: blue;
+        }
+        .botoes{
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .item{
+            transition: 0.5s;
+            border-radius: 5px;
+            height: 30%;
+        }
+        .item:hover{
+            background-color: black;
+            color: white;
+            height: 35%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-blue">
+        <p>Total guardado: <span id="total_guardado">0</span></p>
+        <p>Depositos efetuados: <span id="depositos_efetuados">0</span></p>
+        <p>Retiradas efetuadas: <span id="retiradas_efetudas">0</span></p>
+    </div>
+    <div class="botoes">
+        <button class="item" onclick="depositoCentavos()">Depositar <br>0,50</button>
+        <button class="item" onclick="depositoDois()">Depositar <br> 2,00</button>
+        <button class="item" onclick="saque()">Retirar <br> 0,50</button>
+    </div>
+    <button class="item" onclick="reset()">Reset</button>
+
+<!--
+b) Ao clicar num botão "Depositar 0,50", o valor depositado aumente em R$0,50 e a quantidade de depósitos aumente em 1. Atualize essas informações na tela;
+c) Ao clicar num botão "Depositar 2,00", o valor depositado aumente em R$2,00 e a quantidade de depósitos aumente em 1. Atualize essas informações na tela;
+d) Ao clicar num botão "Retirar 0,50" o valor depositado é diminuído em R$0,50 e a quantidade de retiradas aumenta em 1. Atualize essas informações na tela;
+e) Ao clicar num botão "Retirar" o valor depositado é diminuído de acordo com o campo "Valor", disponível na tela. -->
+</body>
+</html>
+<script>
+    valorTotal = Number(total_guardado.innerHTML);
+    depositoFeito = Number(depositos_efetuados.innerHTML);
+    saqueFeito = Number(retiradas_efetudas.innerHTML);
+    function depositoDois(){
+        depositoFeito+=1;
+        valorTotal += 2
+        total_guardado.innerHTML=valorTotal
+        depositos_efetuados.innerHTML = depositoFeito;
+
+    }
+    function depositoCentavos(){
+        depositoFeito+=1;
+        valorTotal += 0.50
+        total_guardado.innerHTML=valorTotal
+        depositos_efetuados.innerHTML = depositoFeito;
+    }
+    function saque(){
+        saqueFeito+=1;
+        valorTotal-=0.50
+        total_guardado.innerHTML=valorTotal
+        retiradas_efetudas.innerHTML=saqueFeito;
+    }
+    function reset(){
+        total_guardado.innerHTML=0;
+        depositos_efetuados.innerHTML=0;
+        retiradas_efetudas.innerHTML=0;
+    }
+</script>
