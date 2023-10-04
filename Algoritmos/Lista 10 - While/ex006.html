@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o amor da sua vida <input id="nome_amor"> <br>
+    Quanto voce ama ela <input type="number" id="qtd_amor">
+    <div id="msg"></div>
+    <!-- 
+    a) Pergunte o nome da pessoa que o usuário mais ama na vida;
+    b) Pergunte o quanto o usuário a ama (um número inteiro);
+
+    c) Ao clicar num botão "Expressar amor", devem aparecer, abaixo dele, N vezes (conforme o valor em b)) a frase indicada em a), como neste 
+    exemplo (considerando o nome "Lady Gaga" e que ama "3")  
+    -->
+</body>
+</html>
+<script>
+    function amor() {
+        nome = nome_amor.value;
+        qtdAmor= Number(qtd_amor.value);
+        contador = 1;
+
+        while (contador!=qtdAmor) {
+            msg.innerHTML += ` ${contador} - ${nome}, eu te amo! Sempre lembre disso! `;
+            contador+=1
+        }
+    }
+</script>
