@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <button onclick="numerosErrados()">Botao</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function numerosErrados(){
+        var n1=0
+        msg.innerHTML=""
+        while (n1<=30){
+            if(n1!=3 && n1!=4 && n1!=7 && n1!=10 && n1!=12){
+                msg.innerHTML+=n1 + `<br>`;
+                n1+=1
+            }else{
+                msg.innerHTML+=``;
+                n1+=1
+            }
+        }
+    }
+</script>
