@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos elefantes voce tem ? <input type="number" id="ipt_qtdElefantes">
+    <button onclick="atazanar()">Atazanar a médium</button>
+    <div id="msg"></div>
+    <!--  
+    Solicite ao usuário a quantidade elefantes;
+
+b) Ao clicar em "Atazanar a médium", exiba sempre o trecho da canção de 1 elefante, seguido do trecho com 2 elefantes e depois 3... até a quantidade de elefantes indicado em a). Note que a palavra "incomodam" repete-se conforme essa mesma quantidade. 
+
+Por exemplo, o se o usuário informar 4 em a), devem aparecer 3 estrofes, como no enunciado da questão, de "2 elefantes" até "4 elefantes", sempre repetindo a frase do "1 elefante incomoda muita gente" antes de cada estrofe.-->
+</body>
+</html>
+<script>
+    function atazanar() {
+        msg.innerHTML = ""
+        var contador = 2;
+        var qtdElefantes = Number(ipt_qtdElefantes.value)
+        var incomodar = "incomodam, "
+
+        if(qtdElefantes!=1){
+            while (contador <= qtdElefantes) {
+            msg.innerHTML += `1 elefante incomoda muita gente <br>`
+            msg.innerHTML += `${contador} elefantes incomodam ${incomodar} muito mais <br>`
+            contador ++
+            incomodar += "incomodam, "
+            }
+        }else{
+            msg.innerHTML += `1 elefante incomoda muita gente <br>`
+        }
+    }
+</script>
