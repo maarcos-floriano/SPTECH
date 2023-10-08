@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Dias de treino <input type="number" id="ipt_diasTreino">
+    <button onclick="rotina()">Exibir</button>
+    <div id="msg"></div>
+</body>
+
+</html>
+<script>
+    function rotina() {
+
+        var intervalo = Number(ipt_diasTreino.value)
+        msg.innerHTML = "";
+        msg.innerHTML = "Dia 1 - Musculação <br>";
+        var repeticao = 1;
+        var dias = 1
+
+        while (dias < 30) {
+            if (intervalo > 1) {
+                while (repeticao < intervalo) {
+                    msg.innerHTML += `Dia ${dias+=1} - comer domir etc <br>`
+                    repeticao++;
+                }
+                msg.innerHTML += `Dia ${dias += 1} - Musculação <br>`
+            } else {
+                msg.innerHTML += `Dia ${dias += 1} - Musculação <br>`
+            }
+            repeticao = 1;
+        }
+    }
+</script>
