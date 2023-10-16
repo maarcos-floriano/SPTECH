@@ -1,6 +1,6 @@
-create database listaCinco;
+create database AlunoProjeto;
 
-use listaCinco;
+use AlunoProjeto;
 
 -- Criar a tabela Alunos
 CREATE TABLE Alunos (
