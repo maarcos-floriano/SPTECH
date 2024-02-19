@@ -16,7 +16,7 @@ public class Acumulador {
             numeroSorteado = random.nextInt(11);{
         }
         // - Exiba: ```A soma dos números é x```
-        System.out.println("A soma dos números é " + soma);
-        }
+    }
+    System.out.println("A soma dos números é " + soma);
     }
 }
